@@ -1,0 +1,2 @@
+https://github.com/lbiro/Reg2Source/blob/main/Sentinel2.WebApp/Global.asax
+https://github.com/lbiro/Reg2Source/blob/main/Sentinel2.WebApp/App_Code/Initiator.cs
