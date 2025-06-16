@@ -1,0 +1,204 @@
+using log4net; using System; 
+using System.Collections.Generic;
+using System.Text;
+
+namespace AquaSoft.Sentinel2.DTO
+{
+	[Serializable]
+	public class OldalDTO : BaseDTO
+	{
+		private long? _ID = null;
+
+		public long? ID
+		{
+			get { return _ID; }
+			set { _ID = value; }
+		}
+
+		private string _FormID = null;
+
+		public string FormID
+		{
+			get { return _FormID; }
+			set { _FormID = value; }
+		}
+
+		
+		private string _URL = null;
+
+		public string URL
+		{
+			get { return _URL; }
+			set { _URL = value; }
+		}
+
+		private string _URLParameterek = null;
+
+		public string URLParameterek
+		{
+            get { return _URLParameterek; }
+            set { _URLParameterek = value; }
+		}
+
+
+        private string _MunkamenetParameterek = null;
+
+        public string MunkamenetParameterek
+        {
+            get { return _MunkamenetParameterek; }
+            set { _MunkamenetParameterek = value; }
+        }
+
+        private DateTime? _RogzDatumKezdete = null;
+
+        public DateTime? RogzDatumKezdete
+        {
+            get { return _RogzDatumKezdete; }
+            set { _RogzDatumKezdete = value; }
+        }
+        private DateTime? _RogzDatumVege = null;
+
+        public DateTime? RogzDatumVege
+        {
+            get { return _RogzDatumVege; }
+            set { _RogzDatumVege = value; }
+        }
+        private DateTime? _ModDatumKezdete = null;
+
+        public DateTime? ModDatumKezdete
+        {
+            get { return _ModDatumKezdete; }
+            set { _ModDatumKezdete = value; }
+        }
+        private DateTime? _ModDatumVege = null;
+
+        public DateTime? ModDatumVege
+        {
+            get { return _ModDatumVege; }
+            set { _ModDatumVege = value; }
+        }
+        private DateTime? _TorlDatumKezdete = null;
+
+        public DateTime? TorlDatumKezdete
+        {
+            get { return _TorlDatumKezdete; }
+            set { _TorlDatumKezdete = value; }
+        }
+        private DateTime? _TorlDatumVege = null;
+
+        public DateTime? TorlDatumVege
+        {
+            get { return _TorlDatumVege; }
+            set { _TorlDatumVege = value; }
+        }
+    }
+
+	[Serializable]
+	public class OldalKeresoDTO : OldalDTO
+	{
+		private string _IDs = null;
+
+		public string IDs
+		{
+			get { return _IDs; }
+			set { _IDs = value; }
+        }
+
+		private bool _ToroltekIs = false;
+
+		public bool ToroltekIs
+		{
+			get { return _ToroltekIs; }
+			set { _ToroltekIs = value; }
+        }
+
+        private bool _CsakToroltek = false;
+
+        public bool CsakToroltek
+        {
+            get { return _CsakToroltek; }
+            set { _CsakToroltek = value; }
+        }
+
+        private string _FormIDMinta = null;
+
+        public string FormIDMinta
+        {
+            get { return _FormIDMinta; }
+            set { _FormIDMinta = value; }
+        }
+
+
+    }
+
+    [Serializable]
+    public class OldalSzerepkorokDTO : OldalDTO
+    {
+        private string _OldalJogkor;
+        public string OldalJogkor
+        {
+            get { return _OldalJogkor; }
+            set { _OldalJogkor = value; }
+        }
+
+		private long? _SzerepkorID;
+		public long? SzerepkorID
+		{
+			get { return _SzerepkorID; }
+			set { _SzerepkorID = value; }
+		}
+
+		private string _SzerepkorKod;
+		public string SzerepkorKod
+		{
+			get { return _SzerepkorKod; }
+			set { _SzerepkorKod = value; }
+		}
+    }
+
+    [Serializable]
+    public class OldalSzerepkorokKeresoDTO : OldalSzerepkorokDTO
+    {
+        private string _SzerepkorIDs;
+        public string SzerepkorIDs
+        {
+            get { return _SzerepkorIDs; }
+            set { _SzerepkorIDs = value; }
+        }
+
+		private bool _ToroltekIs = false;
+		public bool ToroltekIs
+		{
+			get { return _ToroltekIs; }
+			set { _ToroltekIs = value; }
+		}
+	}
+
+	[Serializable]
+	public class OldalMemoriabanDTO
+	{
+		private string _URL = null;
+		public string URL
+		{
+			get { return _URL; }
+			set { _URL = value; }
+		}
+
+		private string _URLParameterek = null;
+		public string URLParameterek
+		{
+			get { return _URLParameterek; }
+			set { _URLParameterek = value; }
+		}
+
+
+		private string _MunkamenetParameterek = null;
+		public string MunkamenetParameterek
+		{
+			get { return _MunkamenetParameterek; }
+			set { _MunkamenetParameterek = value; }
+		}
+
+		public SortedList<string, List<string>> SzerepkorokEsJogkorok = new SortedList<string, List<string>>();
+	}
+}
